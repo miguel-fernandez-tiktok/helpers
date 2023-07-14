@@ -20,7 +20,7 @@ with open(input_file, 'r', newline='') as csvfile:
             
             # Convert timestamp to ISO-8601 format
             original_date = datetime.strptime(timestamp, '%m/%d/%Y %H:%M:%S%z')
-            iso8601_timestamp = original_date.strftime('%Y-%m-%dT%H:%M:%S%z')
+            iso8601_timestamp = original_date.isoformat()
             
             # Update the row with the ISO-8601 timestamp
             row['timestamp'] = iso8601_timestamp
